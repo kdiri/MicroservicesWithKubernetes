@@ -51,3 +51,18 @@ curl --cacert ./ca.pem -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6Ikp
 ```
 <h1>Hello</h1>
 ```
+
+### Some Useful K8s Commands
+```
+kubectl run nginx --image=nginx:1.10.0
+kubectl get nodes
+kubectl get pods
+kubectl describe pods monolith
+kubectl create deployment nginx --image=nginx:1.10.0
+kubectl create deployment nginx --port 80 --type LoadBalancer
+kubectl get service
+kubectl config view
+# Enter into container
+kubectl exec monolith --stdin --tty -c monolith /bin/sh
+```
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
